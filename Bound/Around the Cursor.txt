@@ -1,0 +1,16 @@
+if(Input.IsKeyDown(sf::Key::W)){
+	Player.Move(cos(angle) * -pSpeed*Elapsed, sin(angle) * -pSpeed*Elapsed);
+	View.Move(cos(angle) * -pSpeed*Elapsed, sin(angle) * -pSpeed*Elapsed);
+}
+if(Input.IsKeyDown(sf::Key::A)){
+	Player.Move(sin(angle) * -pSpeed*Elapsed, cos(angle) * pSpeed*Elapsed);
+	View.Move(sin(angle) * -pSpeed*Elapsed, cos(angle) * pSpeed*Elapsed);
+}				
+if(Input.IsKeyDown(sf::Key::S)){
+	Player.Move(cos(angle) * pSpeed*Elapsed, sin(angle) * pSpeed*Elapsed);
+	View.Move(cos(angle) * pSpeed*Elapsed, sin(angle) * pSpeed*Elapsed);
+}
+if(Input.IsKeyDown(sf::Key::D)){
+	Player.Move(sin(angle) * pSpeed*Elapsed, cos(angle) * -pSpeed*Elapsed);
+	View.Move(sin(angle) * pSpeed*Elapsed, cos(angle) * -pSpeed*Elapsed);
+}
